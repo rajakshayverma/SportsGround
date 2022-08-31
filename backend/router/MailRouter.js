@@ -15,12 +15,12 @@ mailRouter.post('/enquiry/sendadmin' , expressAsyncHandler(async (req, res)=>{
         subject:req.body.subject,
         message:req.body.message
     }
-    const transport=nodemailer.createTransport({
-        service:'hotmail',
-        auth:{
-            user:"superlativecreationsjanakpuri@outlook.com",
-            pass:"ibx_1212"
-        }
+    const transport = nodemailer.createTransport({
+      service: "hotmail",
+      auth: {
+        user: "superlativecreationsjanakpuri@outlook.com",
+        pass: "mukul@070819999",
+      },
     });
     const sendermail="superlativecreationsjanakpuri@outlook.com";
     const mailbody={
@@ -45,13 +45,13 @@ mailRouter.post('/:id',isAuth , expressAsyncHandler(async (req,res)=>{
         const product=req.body.product;
         const mail=req.params.id ;
         if(orderuser){
-        const transport=nodemailer.createTransport({
-            service:'hotmail',
-            auth:{
-                user:"superlativecreationsjanakpuri@outlook.com",
-                pass:"ibx_1212"
-            }
-        })
+        const transport = nodemailer.createTransport({
+          service: "hotmail",
+          auth: {
+            user: "superlativecreationsjanakpuri@outlook.com",
+            pass: "mukul@070819999",
+          },
+        });
         const sendermail="superlativecreationsjanakpuri@outlook.com"
         const mailbody={
             from:`Ruhaan Sports ${sendermail}`,
